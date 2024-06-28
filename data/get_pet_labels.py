@@ -46,23 +46,28 @@ def get_pet_labels(image_dir):
     results_dic = {}
 
     # Iterate through all files in the directory
-    for file in all_files:
+    for file_name in all_files:
 
       # Check it's not a duplicate label
-      if file not in results_dic:
+      if file_name not in results_dic:
+        word_list = file_name.split('_')
 
-        # Get name before numbers and convert to lowercase
-        label = file[:file.rfind('_')].lower()
+        # Check all alphabetical and get spaces
+        for word in word_list:
+          if word.isalpha():
+              pet_name += word + " "
+        # # Get name before numbers and convert to lowercase
+        # label = file_name[:file_name.rfind('_')].lower()
         
-        # Separate by spaces
-        label = label.replace('_', ' ')
+        # Separate by spaces and remove any extra external spacing
+        label = label.strip()
 
-        # Store in dictionary
-        results_dic[file] = [label]
+        # Store lowercase label in dictionary
+        results_dic[file_name] = [label.lower()]
     else:
-         print("** Warning: Key=", file, 
+         print("** Warning: Key=", file_name, 
                "already exists in results_dic with value =", 
-               results_dic[file])
+               results_dic[file_name])
       
     # Return dictionary
     return results_dic
