@@ -47,9 +47,8 @@ def get_pet_labels(image_dir):
 
     for file in all_files:
       words = file.split('_')
-      end = file.rfind('_')
-      label = file[:end].lower()
-      label = label.replace('-', ' ')
+      label = file[:file.rfind('_')].lower()
+      label = label.replace('_', ' ')
       print(words, label)
       results_dic[file] = [label]
     
