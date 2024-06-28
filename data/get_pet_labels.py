@@ -46,5 +46,6 @@ def get_pet_labels(image_dir):
 
     for file in all_files:
       words = file.split('-')
-      print(words[:len(words)-1])
+      end = file.rfind('-')
+      print(words, file[:end])
     return None
