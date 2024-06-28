@@ -51,11 +51,12 @@ def get_pet_labels(image_dir):
       # Check it's not a duplicate label
       if file_name not in results_dic:
         word_list = file_name.split('_')
+        label = ""
 
         # Check all alphabetical and get spaces
         for word in word_list:
           if word.isalpha():
-              pet_name += word + " "
+              label += word + " "
         
         # Tried to Get name before numbers and convert to lowercase, but that relies
         # on correct input formatting
