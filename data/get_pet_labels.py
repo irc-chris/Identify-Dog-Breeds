@@ -43,9 +43,12 @@ def get_pet_labels(image_dir):
     # Replace None with the results_dic dictionary that you created with this
     # function
     all_files = listdir(image_dir)
+    results_dic = {}
 
     for file in all_files:
-      words = file.split('-')
-      end = file.rfind('-')
-      print(words, file[:end])
-    return None
+      words = file.split('_')
+      end = file.rfind('_')
+      label = file[:end].lower()
+      print(words, label)
+      results_dic[file] = [label]
+    return results_dic
