@@ -42,7 +42,8 @@ def get_pet_labels(image_dir):
     """
     # Replace None with the results_dic dictionary that you created with this
     # function
+    all_files = listdir(image_dir)
 
-    label_file = open(image_dir, 'r')
-    print(label_file)
+    for file in all_files:
+      print(file)
     return None
