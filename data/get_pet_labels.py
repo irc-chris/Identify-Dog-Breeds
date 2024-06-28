@@ -56,8 +56,10 @@ def get_pet_labels(image_dir):
         for word in word_list:
           if word.isalpha():
               pet_name += word + " "
-        # # Get name before numbers and convert to lowercase
-        # label = file_name[:file_name.rfind('_')].lower()
+        
+        # Tried to Get name before numbers and convert to lowercase, but that relies
+        # on correct input formatting
+        #         label = file_name[:file_name.rfind('_')].lower()
         
         # Separate by spaces and remove any extra external spacing
         label = label.strip()
