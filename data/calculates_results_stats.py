@@ -88,21 +88,17 @@ def calculates_results_stats(results_dic):
     
     for key in results_dic:
         value = results_dic[key]
+        if value[3]==1 and value[4]==1:
+            A += 1
         if value[3]==1:
-                if value[4]==1:
-                        A += 1
-                else:
-                        B += 1
-        else:
-              if value[4]==0:
-                    C =+ 1
+            B += 1
+        if value[2]==1 and value[3]==1:
+            E += 1
+        if value[3]==0 and value[4]==0:
+            print(key, value)
+            C =+ 1
         if value[2]==1:
-                if value[3]==1:
-                        E += 1
-                else:
-                        Y += 1
-            
-            
+            Y += 1
     
     results_stats_dict['n_images'] = Z
     results_stats_dict['n_dogs_img'] = B
