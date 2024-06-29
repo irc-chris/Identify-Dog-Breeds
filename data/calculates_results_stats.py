@@ -71,6 +71,7 @@ def calculates_results_stats(results_dic):
     # Replace None with the results_stats_dic dictionary that you created with 
     # this function 
     results_stats_dict = {}
+    print(results_dic)
 
     # Z = number of images
     Z = len(results_dic)
