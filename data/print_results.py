@@ -64,6 +64,8 @@ def print_results(results_dic, results_stats_dic, model,
     """    
     print("Type of CNN Model Architecture Used:", model)
 
-    print('Number of Images:', results_stats_dic[n_im]
+    print('Number of Images:', results_stats_dic['n_images'])
+    print('Number of Dog Images:', results_stats_dic['n_dog_images'])
+    print()
 
                 
