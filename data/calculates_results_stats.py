@@ -85,21 +85,21 @@ def calculates_results_stats(results_dic):
     # Y = number of pet label being in classified labels 
     Y = 0
     
+    # Iterate through pet images
     for key in results_dic:
         value = results_dic[key]
-        if value[3]==1 and value[4]==1:
+        if value[3]==1 and value[4]==1: # Dog and Classified as Dog
             A += 1
-        if value[3]==1:
+        if value[3]==1: # Dog
             B += 1
-        if value[2]==1 and value[3]==1:
+        if value[2]==1 and value[3]==1: # Dog Correct breed
             E += 1
-        if value[3]==0 and value[4]==0:
-            print(key, value)
+        if value[3]==0 and value[4]==0: # Not Dog and Classified as Not Dog
             C += 1
-            print(C)
-        if value[2]==1:
+        if value[2]==1: # Correct label regardless of dog
             Y += 1
 
+    # Store values
     results_stats_dict['n_images'] = Z
     results_stats_dict['n_dogs_img'] = B
     if Z > 0:
@@ -107,18 +107,12 @@ def calculates_results_stats(results_dic):
         n_pet_notd = Z - B
         results_stats_dict['n_notdogs_img'] = n_pet_notd
         results_stats_dict['pct_corr_label'] = Y/Z * 100
-        print('had z')
     if B > 0:
         results_stats_dict['pct_correct_dogs'] = A/B * 100
         results_stats_dict['pct_correct_breed'] = E/B * 100
-        print('had b')
     if n_pet_notd > 0:
-        print(C)
-        print(n_pet_notd)
         results_stats_dict['pct_correct_notdogs'] = C/n_pet_notd * 100
-        print('had d')
     results_stats_dict['n_corr_dog'] = A
     results_stats_dict['n_corr_breed'] = E
 
-    print(results_stats_dict)
     return results_stats_dict
