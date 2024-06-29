@@ -70,4 +70,44 @@ def calculates_results_stats(results_dic):
     """        
     # Replace None with the results_stats_dic dictionary that you created with 
     # this function 
-    return None
+    results_stats_dict = {}
+
+    # Z = number of images
+    Z = len(results_dic)
+    # A = number of correctly classified as dogs
+    A = 0
+    # B = number of actual dogs (pet labels)
+    B = 0
+    # C = number of correctly classified as not dogs
+    C = 0
+    # E = number of correct breed matches
+    E = 0
+    # Y = number of pet label being in classified labels 
+    Y = 0
+    
+    for key in results_dic:
+        value = results_stats_dict[key]
+        if value[3]==1 and value[4]==1:
+            A += 1
+        if value[3]==1:
+            B += 0
+        if value[3]==0 and value[4]==0:
+            C =+ 1
+        if value[2]==1 and value[3]:
+            E += 1
+        if value[2]==1:
+            Y += 1
+
+    if Z > 0:
+        # D = number of not dogs (pet labels)
+        D = Z - B
+        results_stats_dict['pct_correct_label'] = Y/Z * 100
+    if B > 0:
+        results_stats_dict['pct_correct_dog'] = A/B * 100
+        results_stats_dict['pct_correct_breed'] = E/B * 100
+    if D > 0:
+        results_stats_dict['pct_correct_not_dog'] = C/D * 100
+    results_stats_dict['n_correct_dog'] = A
+    results_stats_dict['n_correct_breed'] = E
+
+    return results_stats_dict
