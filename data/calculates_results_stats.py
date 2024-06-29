@@ -113,4 +113,5 @@ def calculates_results_stats(results_dic):
     results_stats_dict['n_corr_dog'] = A
     results_stats_dict['n_corr_breed'] = E
 
+    print(results_stats_dict)
     return results_stats_dict
