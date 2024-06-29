@@ -68,8 +68,10 @@ def classify_images(images_dir, results_dic, model):
 
     print(images_dir)
     for key in results_dic:
-        print(key)
+        print(key, results_dic[key])
         image_class = classifier(images_dir+key, model) 
-        print(image_class.lower().strip())
+        classifier_label = image_class.lower().strip()
+        print(classifier_label) 
+        print(results_dic[key] in classifier_label)
 
     # 
