@@ -86,7 +86,7 @@ def calculates_results_stats(results_dic):
     Y = 0
     
     for key in results_dic:
-        value = results_stats_dict[key]
+        value = results_dic[key]
         if value[3]==1 and value[4]==1:
             A += 1
         if value[3]==1:
