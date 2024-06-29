@@ -71,7 +71,6 @@ def calculates_results_stats(results_dic):
     # Replace None with the results_stats_dic dictionary that you created with 
     # this function 
     results_stats_dict = {}
-    print(results_dic)
 
     # Z = number of images
     Z = len(results_dic)
@@ -97,9 +96,10 @@ def calculates_results_stats(results_dic):
         if value[3]==0 and value[4]==0:
             print(key, value)
             C =+ 1
+            print(C)
         if value[2]==1:
             Y += 1
-    
+
     results_stats_dict['n_images'] = Z
     results_stats_dict['n_dogs_img'] = B
     if Z > 0:
