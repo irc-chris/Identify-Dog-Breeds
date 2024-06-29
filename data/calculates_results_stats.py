@@ -95,7 +95,7 @@ def calculates_results_stats(results_dic):
             E += 1
         if value[3]==0 and value[4]==0:
             print(key, value)
-            C =+ 1
+            C += 1
             print(C)
         if value[2]==1:
             Y += 1
