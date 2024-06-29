@@ -75,8 +75,8 @@ def adjust_results4_isadog(results_dic, dogfile):
         # Reads in dognames from first line in file
         line = infile.readline()
         while line != "":
-          print(line)
           dognames.append(line.strip)
+          print(line)
           line = infile.readline()
 
     for key in results_dic:
