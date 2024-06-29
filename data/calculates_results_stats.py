@@ -97,17 +97,20 @@ def calculates_results_stats(results_dic):
             E += 1
         if value[2]==1:
             Y += 1
-
+    
+    results_stats_dict['n_images'] = Z
+    results_stats_dict['n_dogs_img'] = B
     if Z > 0:
         # D = number of not dogs (pet labels)
-        D = Z - B
-        results_stats_dict['pct_correct_label'] = Y/Z * 100
+        n_pet_notd = Z - B
+        results_stats_dict['n_notdogs_img'] = n_pet_notd
+        results_stats_dict['pct_corr_label'] = Y/Z * 100
     if B > 0:
-        results_stats_dict['pct_correct_dog'] = A/B * 100
+        results_stats_dict['pct_correct_dogs'] = A/B * 100
         results_stats_dict['pct_correct_breed'] = E/B * 100
     if D > 0:
-        results_stats_dict['pct_correct_not_dog'] = C/D * 100
-    results_stats_dict['n_correct_dog'] = A
-    results_stats_dict['n_correct_breed'] = E
+        results_stats_dict['pct_correct_notdogs'] = C/n_pet_notd * 100
+    results_stats_dict['n_corr_dog'] = A
+    results_stats_dict['n_corr_breed'] = E
 
     return results_stats_dict
