@@ -91,10 +91,10 @@ def calculates_results_stats(results_dic):
             A += 1
         if value[3]==1:
             B += 1
+        if value[2]==1 and value[3]==1:
+            E += 1
         if value[3]==0 and value[4]==0:
             C =+ 1
-        if value[2]==1 and value[3]:
-            E += 1
         if value[2]==1:
             Y += 1
     
