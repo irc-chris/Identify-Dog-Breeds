@@ -102,17 +102,21 @@ def calculates_results_stats(results_dic):
     # Store values
     results_stats_dict["n_images"] = Z
     results_stats_dict["n_dogs_img"] = B
+    results_stats_dict['n_correct_dogs'] = A
+    results_stats_dict['n_correct_notdogs'] = C
+    results_stats_dict['n_correct_breed'] = E
+    results_stats_dict['n_match'] = Y
     if Z > 0:
         # D = number of not dogs (pet labels)
         n_pet_notd = Z - B
         results_stats_dict["n_notdogs_img"] = n_pet_notd
-        results_stats_dict["pct_corr_label"] = Y / Z * 100
+        results_stats_dict["pct_match"] = Y / Z * 100
     if B > 0:
         results_stats_dict["pct_correct_dogs"] = A / B * 100
         results_stats_dict["pct_correct_breed"] = E / B * 100
     if n_pet_notd > 0:
         results_stats_dict["pct_correct_notdogs"] = C / n_pet_notd * 100
-    results_stats_dict["n_corr_dog"] = A
-    results_stats_dict["n_corr_breed"] = E
+#     results_stats_dict["n_corr_dog"] = A
+#     results_stats_dict["n_corr_breed"] = E
 
     return results_stats_dict
