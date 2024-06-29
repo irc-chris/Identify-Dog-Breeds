@@ -111,6 +111,8 @@ def calculates_results_stats(results_dic):
         results_stats_dict['pct_correct_breed'] = E/B * 100
         print('had b')
     if n_pet_notd > 0:
+        print(C)
+        print(n_pet_notd)
         results_stats_dict['pct_correct_notdogs'] = C/n_pet_notd * 100
         print('had d')
     results_stats_dict['n_corr_dog'] = A
