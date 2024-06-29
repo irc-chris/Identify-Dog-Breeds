@@ -67,6 +67,7 @@ def adjust_results4_isadog(results_dic, dogfile):
     Returns:
            None - results_dic is mutable data type so no return needed.
     """           
+    print("Starting Dog Classification")
     dognames_dic = dict()
 
     # Reads in dognames from file, 1 name per line & automatically closes file
@@ -74,5 +75,5 @@ def adjust_results4_isadog(results_dic, dogfile):
         # Reads in dognames from first line in file
         line = infile.readline()
         print(line)
-        
-    None
+
+    
