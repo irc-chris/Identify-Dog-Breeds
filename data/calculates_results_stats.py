@@ -105,11 +105,14 @@ def calculates_results_stats(results_dic):
         n_pet_notd = Z - B
         results_stats_dict['n_notdogs_img'] = n_pet_notd
         results_stats_dict['pct_corr_label'] = Y/Z * 100
+        print('had z')
     if B > 0:
         results_stats_dict['pct_correct_dogs'] = A/B * 100
         results_stats_dict['pct_correct_breed'] = E/B * 100
+        print('had b')
     if n_pet_notd > 0:
         results_stats_dict['pct_correct_notdogs'] = C/n_pet_notd * 100
+        print('had d')
     results_stats_dict['n_corr_dog'] = A
     results_stats_dict['n_corr_breed'] = E
 
