@@ -90,7 +90,7 @@ def calculates_results_stats(results_dic):
         if value[3]==1 and value[4]==1:
             A += 1
         if value[3]==1:
-            B += 0
+            B += 1
         if value[3]==0 and value[4]==0:
             C =+ 1
         if value[2]==1 and value[3]:
