@@ -75,9 +75,12 @@ def adjust_results4_isadog(results_dic, dogfile):
         # Reads in dognames from first line in file
         line = infile.readline()
         while line != "":
+          # add dog name to list
           dognames.append(line.strip())
+          # Read next name
           line = infile.readline()
 
+    # for each dog image file
     for key in results_dic:
+       # check if pet and/or classifier labels are dog names, then add booleans to dictionary values
        results_dic[key].extend([1 if results_dic[key][0] in dognames else 0, 1 if results_dic[key][1] in dognames else 0])
-       print(results_dic[key])
