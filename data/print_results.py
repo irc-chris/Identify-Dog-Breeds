@@ -73,12 +73,16 @@ def print_results(results_dic, results_stats_dic, model,
     print('% Correct "Not-a" Dog:', results_stats_dic['pct_correct_notdogs'])
     print('% Match:', results_stats_dic['pct_match'])
 
-    if print_incorrect_dogs and(results_stats_dic['n_dogs_img'] + results_stats_dic['n_notdogs_img'] != results_stats_dic['n_images']):
-        for key in results_dic:
-            if sum(results_dic[key][3:]) == 1:
-                print("File: {}, Label: {}, Classifier Label: {}".format(key, results_dic[key][0], results_dic[key][1]))
+    if print_incorrect_dogs:
+        print("Misclassified Dogs:")
+        if (results_stats_dic['n_dogs_img'] + results_stats_dic['n_notdogs_img'] != results_stats_dic['n_images']):
+                for key in results_dic:
+                        if sum(results_dic[key][3:]) == 1:
+                                print("Pet Label: {}, Classifier Label: {}".format(results_dic[key][0], results_dic[key][1]))
 
-    if print_incorrect_breed and (results_stats_dic['n_dogs_img'] != results_stats_dic['pct_correct_breed']):
-        for key in results_dic:
-            if sum(results_dic[key][3:]) == 2 and results_dic[key][2] == 0:
-                print("File: {}, Label: {}, Classifier Label: {}".format(key, results_dic[key][0], results_dic[key][1]))
+    if print_incorrect_breed:
+        print("Misclassified Dogbreeds:")
+        if (results_stats_dic['n_dogs_img'] != results_stats_dic['pct_correct_breed']):
+                for key in results_dic:
+                        if sum(results_dic[key][3:]) == 2 and results_dic[key][2] == 0:
+                                print("Pet Label: {}, Classifier Breed: {}".format(results_dic[key][0], results_dic[key][1]))
