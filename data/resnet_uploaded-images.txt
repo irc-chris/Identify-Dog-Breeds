@@ -68,14 +68,14 @@ Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
 N Images:  5  N Dog Images:  3  N NotDog Images:  2 
 Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
 Type of CNN Model Architecture Used: resnet
-Number of Images: 5
-Number of Dog Images: 3
-Number of "Not-a" Dog Images: 2
-% Correct Dogs: 100.0
-% Correct Breed: 100.0
-% Correct "Not-a" Dog: 100.0
-% Match: 80.0
+# Total Images: 5
+# Dog Images: 3
+# Not-a-Dog Images: 2
+% Not-a-Dog Correct: 100.0
+% Dogs Correct: 100.0
+% Breeds Correct: 100.0
+% Match Labels: 80.0
 Misclassified Dogs:
 Misclassified Dogbreeds:
 
-** Total Elapsed Runtime: 0:0:5
+** Total Elapsed Runtime: 0:0:3

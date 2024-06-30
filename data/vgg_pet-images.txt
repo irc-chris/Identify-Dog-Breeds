@@ -318,16 +318,16 @@ Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  93.3
 N Images: 40  N Dog Images: 30  N NotDog Images: 10 
 Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  93.3
 Type of CNN Model Architecture Used: vgg
-Number of Images: 40
-Number of Dog Images: 30
-Number of "Not-a" Dog Images: 10
-% Correct Dogs: 100.0
-% Correct Breed: 93.33333333333333
-% Correct "Not-a" Dog: 100.0
-% Match: 87.5
+# Total Images: 40
+# Dog Images: 30
+# Not-a-Dog Images: 10
+% Not-a-Dog Correct: 100.0
+% Dogs Correct: 100.0
+% Breeds Correct: 93.33333333333333
+% Match Labels: 87.5
 Misclassified Dogs:
 Misclassified Dogbreeds:
 Pet Label: beagle, Classifier Breed: walker hound, walker foxhound
 Pet Label: great pyrenees, Classifier Breed: kuvasz
 
-** Total Elapsed Runtime: 0:2:24
+** Total Elapsed Runtime: 0:1:19

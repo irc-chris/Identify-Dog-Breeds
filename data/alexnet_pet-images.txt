@@ -318,13 +318,13 @@ Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  80.0
 N Images: 40  N Dog Images: 30  N NotDog Images: 10 
 Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  80.0
 Type of CNN Model Architecture Used: alexnet
-Number of Images: 40
-Number of Dog Images: 30
-Number of "Not-a" Dog Images: 10
-% Correct Dogs: 100.0
-% Correct Breed: 80.0
-% Correct "Not-a" Dog: 100.0
-% Match: 75.0
+# Total Images: 40
+# Dog Images: 30
+# Not-a-Dog Images: 10
+% Not-a-Dog Correct: 100.0
+% Dogs Correct: 100.0
+% Breeds Correct: 80.0
+% Match Labels: 75.0
 Misclassified Dogs:
 Misclassified Dogbreeds:
 Pet Label: beagle, Classifier Breed: walker hound, walker foxhound
@@ -334,4 +334,4 @@ Pet Label: golden retriever, Classifier Breed: tibetan mastiff
 Pet Label: beagle, Classifier Breed: english foxhound
 Pet Label: boston terrier, Classifier Breed: basenji
 
-** Total Elapsed Runtime: 0:0:40
+** Total Elapsed Runtime: 0:0:7
