@@ -69,14 +69,14 @@ def print_results(
     """
     print("Type of CNN Model Architecture Used:", model)
 
-    print("Number of Images:", results_stats_dic["n_images"])
-    print("Number of Dog Images:", results_stats_dic["n_dogs_img"])
-    print('Number of "Not-a" Dog Images:', results_stats_dic["n_notdogs_img"])
+    print("# Total Images:", results_stats_dic["n_images"])
+    print("# Dog Images:", results_stats_dic["n_dogs_img"])
+    print('# Not-a-Dog Images:', results_stats_dic["n_notdogs_img"])
 
-    print("% Correct Dogs:", results_stats_dic["pct_correct_dogs"])
-    print("% Correct Breed:", results_stats_dic["pct_correct_breed"])
-    print('% Correct "Not-a" Dog:', results_stats_dic["pct_correct_notdogs"])
-    print("% Match:", results_stats_dic["pct_match"])
+    print('% Not-a-Dog Correct:', results_stats_dic["pct_correct_notdogs"])
+    print("% Dogs Correct:", results_stats_dic["pct_correct_dogs"])
+    print("% Breeds Correct:", results_stats_dic["pct_correct_breed"])
+    print("% Match Labels:", results_stats_dic["pct_match"])
 
     if print_incorrect_dogs:
         print("Misclassified Dogs:")
