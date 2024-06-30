@@ -1,0 +1,81 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+** Warning: Key= Malinois_02.jpg already exists in results_dic with value = ['malinois']
+
+Pet Image Label Dictionary has 5 key-value pairs.
+Below are 5 of them:
+ 1 key:                Malinois_01.jpg  label:                   malinois
+ 2 key:                Malinois_03.jpg  label:                   malinois
+ 3 key:                 Peacock_01.jpg  label:                    peacock
+ 4 key:                     Cup_01.jpg  label:                        cup
+ 5 key:                Malinois_02.jpg  label:                   malinois
+
+     MATCH:
+
+               Malinois_01.jpg: 
+Real:                   malinois   Classifier:                       malinois
+
+               Malinois_03.jpg: 
+Real:                   malinois   Classifier:                       malinois
+
+                Peacock_01.jpg: 
+Real:                    peacock   Classifier:                        peacock
+
+               Malinois_02.jpg: 
+Real:                   malinois   Classifier:                       malinois
+
+ NOT A MATCH:
+
+                    Cup_01.jpg: 
+Real:                        cup   Classifier:                cocktail shaker
+
+# Total Images 5 # Matches: 4 # NOT Matches: 1
+Starting Dog Classification
+
+     MATCH:
+
+               Malinois_01.jpg: 
+Real:                   malinois   Classifier:                       malinois  
+PetLabelDog: 1  ClassLabelDog: 1
+
+               Malinois_03.jpg: 
+Real:                   malinois   Classifier:                       malinois  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                Peacock_01.jpg: 
+Real:                    peacock   Classifier:                        peacock  
+PetLabelDog: 0  ClassLabelDog: 0
+
+               Malinois_02.jpg: 
+Real:                   malinois   Classifier:                       malinois  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+                    Cup_01.jpg: 
+Real:                        cup   Classifier:                cocktail shaker  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 5 # Matches: 4 # NOT Matches: 1
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  5  N Dog Images:  3  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  5  N Dog Images:  3  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
+Type of CNN Model Architecture Used: vgg
+Number of Images: 5
+Number of Dog Images: 3
+Number of "Not-a" Dog Images: 2
+% Correct Dogs: 100.0
+% Correct Breed: 100.0
+% Correct "Not-a" Dog: 100.0
+% Match: 80.0
+Misclassified Dogs:
+Misclassified Dogbreeds:
+
+** Total Elapsed Runtime: 0:0:9
