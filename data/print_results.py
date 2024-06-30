@@ -65,7 +65,10 @@ def print_results(results_dic, results_stats_dic, model,
     print("Type of CNN Model Architecture Used:", model)
 
     print('Number of Images:', results_stats_dic['n_images'])
-    print('Number of Dog Images:', results_stats_dic['n_dog_images'])
-    print()
+    print('Number of Dog Images:', results_stats_dic['n_dogs_img'])
+    print('Number of "Not-a" Dog Images:', results_stats_dic['n_notdogs_img'])
 
-                
+    print('% Correct Dogs:', results_stats_dic['pct_correct_dogs'])
+    print('% Correct Breed:', results_stats_dic['pct_correct_breed'])
+    print('% Correct "Not-a" Dog:', results_stats_dic['pct_correct_notdogs'])
+    print('% Match:', results_stats_dic['pct_match'])
