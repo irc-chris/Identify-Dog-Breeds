@@ -4,7 +4,7 @@
 #
 # PROGRAMMER: Ishawnia Christopher
 # DATE CREATED: June 29, 2024
-# REVISED DATE:
+# REVISED DATE: July 1, 2024
 # PURPOSE: Create a function classify_images that uses the classifier function
 #          to create the classifier labels and then compares the classifier
 #          labels to the pet image labels. This function inputs:
@@ -22,6 +22,7 @@
 ##
 # Imports classifier function for using CNN to classify images
 from classifier import classifier
+import os.path 
 
 
 # TODO 3: Define classify_images function below, specifically replace the None
@@ -72,7 +73,7 @@ def classify_images(images_dir, results_dic, model):
         pet_label = value[0]
 
         # Classify image with full path directory + image name & model
-        image_class = classifier(images_dir + key, model)
+        image_class = classifier(os.path.join(images_dir, key), model)
 
         # clean up label
         classifier_label = image_class.lower().strip()

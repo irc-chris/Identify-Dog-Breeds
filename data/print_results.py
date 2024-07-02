@@ -4,7 +4,7 @@
 #
 # PROGRAMMER: Ishawnia Christopher
 # DATE CREATED: June 29, 2024
-# REVISED DATE:
+# REVISED DATE: July 1, 2024
 # PURPOSE: Create a function print_results that prints the results statistics
 #          from the results statistics dictionary (results_stats_dic). It
 #          should also allow the user to be able to print out cases of misclassified
@@ -84,7 +84,7 @@ def print_results(
         != results_stats_dic["n_images"]
     ):
         print("Misclassified Dogs:")
-        for value in results_dic.values()
+        for value in results_dic.values():
             if sum(value[3:]) == 1:
                 print(
                     "Pet Label: {}, Classifier Label: {}".format(

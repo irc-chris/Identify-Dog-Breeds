@@ -329,4 +329,4 @@ Misclassified Dogbreeds:
 Pet Label: beagle, Classifier Breed: walker hound, walker foxhound
 Pet Label: great pyrenees, Classifier Breed: kuvasz
 
-** Total Elapsed Runtime: 0:2:16
+** Total Elapsed Runtime: 0:0:59

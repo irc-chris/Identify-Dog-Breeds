@@ -333,4 +333,4 @@ Pet Label: golden retriever, Classifier Breed: tibetan mastiff
 Pet Label: beagle, Classifier Breed: english foxhound
 Pet Label: boston terrier, Classifier Breed: basenji
 
-** Total Elapsed Runtime: 0:0:30
+** Total Elapsed Runtime: 0:0:8

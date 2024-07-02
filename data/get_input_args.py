@@ -49,7 +49,7 @@ def get_input_args():
         "--dir", type=str, default="pet_images/", help="path to folder of images"
     )
     parser.add_argument(
-        "--arch", type=str, default="vgg", help="CNN Model Architecture"
+        "--arch", type=str, default="vgg", help="CNN Model Architecture", choices=["vgg", "alexnet", "resnet"]
     )
     parser.add_argument(
         "--dogfile",
