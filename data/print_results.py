@@ -78,7 +78,7 @@ def print_results(
     print("% Breeds Correct:", results_stats_dic["pct_correct_breed"])
     print("% Match Labels:", results_stats_dic["pct_match"])
 
-    # Print misclassified dogs only if parameter indicates.
+    # Print occuring misclassified dogs only if parameter indicates.
     if print_incorrect_dogs and (
         results_stats_dic["n_correct_dogs"] + results_stats_dic["n_correct_notdogs"]
         != results_stats_dic["n_images"]
@@ -92,7 +92,7 @@ def print_results(
                     )
                 )
    
-    # Print misclassified breeds only if parameter indicates.
+    # Print occuring misclassified breeds only if parameter indicates.
     if print_incorrect_breed and (
         results_stats_dic["n_correct_dogs"] != results_stats_dic["n_correct_breed"]
     ):
