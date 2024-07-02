@@ -71,34 +71,34 @@ def print_results(
 
     print("# Total Images:", results_stats_dic["n_images"])
     print("# Dog Images:", results_stats_dic["n_dogs_img"])
-    print('# Not-a-Dog Images:', results_stats_dic["n_notdogs_img"])
+    print("# Not-a-Dog Images:", results_stats_dic["n_notdogs_img"])
 
-    print('% Not-a-Dog Correct:', results_stats_dic["pct_correct_notdogs"])
+    print("% Not-a-Dog Correct:", results_stats_dic["pct_correct_notdogs"])
     print("% Dogs Correct:", results_stats_dic["pct_correct_dogs"])
     print("% Breeds Correct:", results_stats_dic["pct_correct_breed"])
     print("% Match Labels:", results_stats_dic["pct_match"])
 
-    if print_incorrect_dogs:
+    if print_incorrect_dogs and (
+        results_stats_dic["n_dogs_img"] + results_stats_dic["n_notdogs_img"]
+        != results_stats_dic["n_images"]
+    ):
         print("Misclassified Dogs:")
-        if (
-            results_stats_dic["n_dogs_img"] + results_stats_dic["n_notdogs_img"]
-            != results_stats_dic["n_images"]
-        ):
-            for key in results_dic:
-                if sum(results_dic[key][3:]) == 1:
-                    print(
-                        "Pet Label: {}, Classifier Label: {}".format(
-                            results_dic[key][0], results_dic[key][1]
-                        )
+        for key in results_dic:
+            if sum(results_dic[key][3:]) == 1:
+                print(
+                    "Pet Label: {}, Classifier Label: {}".format(
+                        results_dic[key][0], results_dic[key][1]
                     )
+                )
 
-    if print_incorrect_breed:
+    if print_incorrect_breed and (
+        results_stats_dic["n_dogs_img"] != results_stats_dic["pct_correct_breed"]
+    ):
         print("Misclassified Dogbreeds:")
-        if results_stats_dic["n_dogs_img"] != results_stats_dic["pct_correct_breed"]:
-            for key in results_dic:
-                if sum(results_dic[key][3:]) == 2 and results_dic[key][2] == 0:
-                    print(
-                        "Pet Label: {}, Classifier Breed: {}".format(
-                            results_dic[key][0], results_dic[key][1]
-                        )
+        for key in results_dic:
+            if sum(results_dic[key][3:]) == 2 and results_dic[key][2] == 0:
+                print(
+                    "Pet Label: {}, Classifier Breed: {}".format(
+                        results_dic[key][0], results_dic[key][1]
                     )
+                )
