@@ -68,8 +68,8 @@ def classify_images(images_dir, results_dic, model):
     """
 
     # Iterate through images in directory
-    for key in results_dic:
-        pet_label = results_dic[key][0]
+    for key, value in results_dic.items():
+        pet_label = value[0]
 
         # Classify image with full path directory + image name & model
         image_class = classifier(images_dir + key, model)
@@ -78,6 +78,6 @@ def classify_images(images_dir, results_dic, model):
         classifier_label = image_class.lower().strip()
 
         # compare labels, and extend dictionary label
-        results_dic[key].extend(
+        value.extend(
             [classifier_label, 1 if pet_label in classifier_label else 0]
         )
