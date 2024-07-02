@@ -2,7 +2,6 @@ Command Line Arguments:
      dir = uploaded_images/ 
     arch = vgg 
  dogfile = dognames.txt
-** Warning: Key= Malinois_02.jpg already exists in results_dic with value = ['malinois']
 
 Pet Image Label Dictionary has 5 key-value pairs.
 Below are 5 of them:
@@ -75,6 +74,5 @@ Type of CNN Model Architecture Used: vgg
 % Dogs Correct: 100.0
 % Breeds Correct: 100.0
 % Match Labels: 80.0
-Misclassified Dogbreeds:
 
-** Total Elapsed Runtime: 0:0:22
+** Total Elapsed Runtime: 0:0:8

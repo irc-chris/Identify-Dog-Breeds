@@ -2,7 +2,6 @@ Command Line Arguments:
      dir = uploaded_images/ 
     arch = alexnet 
  dogfile = dognames.txt
-** Warning: Key= Malinois_02.jpg already exists in results_dic with value = ['malinois']
 
 Pet Image Label Dictionary has 5 key-value pairs.
 Below are 5 of them:
@@ -79,4 +78,4 @@ Misclassified Dogbreeds:
 Pet Label: malinois, Classifier Breed: german shepherd, german shepherd dog, german police dog, alsatian
 Pet Label: malinois, Classifier Breed: german shepherd, german shepherd dog, german police dog, alsatian
 
-** Total Elapsed Runtime: 0:0:5
+** Total Elapsed Runtime: 0:0:1
