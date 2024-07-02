@@ -86,8 +86,7 @@ def calculates_results_stats(results_dic):
     Y = 0
 
     # Iterate through pet images
-    for key in results_dic:
-        value = results_dic[key]
+    for value in results_dic.values():
         if value[3] == 1 and value[4] == 1:  # Dog and Classified as Dog
             A += 1
         if value[3] == 1:  # Dog
