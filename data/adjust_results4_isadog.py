@@ -83,7 +83,7 @@ def adjust_results4_isadog(results_dic, dogfile):
     # for each dog image file
     for value in results_dic.values():
         # check if pet and/or classifier labels are dog names, then add booleans to dictionary values
-        results_dic[key].extend(
+        value.extend(
             [
                 1 if value[0] in dognames else 0,
                 1 if value[1] in dognames else 0,
