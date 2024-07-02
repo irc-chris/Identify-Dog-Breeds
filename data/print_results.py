@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/print_results.py
 #
-# PROGRAMMER:
-# DATE CREATED:
+# PROGRAMMER: Ishawnia Christopher
+# DATE CREATED: June 29, 2024
 # REVISED DATE:
 # PURPOSE: Create a function print_results that prints the results statistics
 #          from the results statistics dictionary (results_stats_dic). It
@@ -78,8 +78,9 @@ def print_results(
     print("% Breeds Correct:", results_stats_dic["pct_correct_breed"])
     print("% Match Labels:", results_stats_dic["pct_match"])
 
+    # Print misclassified dogs only if parameter indicates.
     if print_incorrect_dogs and (
-        results_stats_dic["n_dogs_img"] + results_stats_dic["n_notdogs_img"]
+        results_stats_dic["n_correct_dogs"] + results_stats_dic["n_correct_notdogs"]
         != results_stats_dic["n_images"]
     ):
         print("Misclassified Dogs:")
@@ -90,9 +91,10 @@ def print_results(
                         results_dic[key][0], results_dic[key][1]
                     )
                 )
-
+   
+    # Print misclassified breeds only if parameter indicates.
     if print_incorrect_breed and (
-        results_stats_dic["n_dogs_img"] != results_stats_dic["pct_correct_breed"]
+        results_stats_dic["n_correct_dogs"] != results_stats_dic["n_correct_breed"]
     ):
         print("Misclassified Dogbreeds:")
         for key in results_dic:

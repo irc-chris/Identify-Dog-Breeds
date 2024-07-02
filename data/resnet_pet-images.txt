@@ -326,9 +326,10 @@ Type of CNN Model Architecture Used: resnet
 % Breeds Correct: 90.0
 % Match Labels: 82.5
 Misclassified Dogs:
+Pet Label: cat, Classifier Label: norwegian elkhound, elkhound
 Misclassified Dogbreeds:
 Pet Label: beagle, Classifier Breed: walker hound, walker foxhound
 Pet Label: great pyrenees, Classifier Breed: kuvasz
 Pet Label: golden retriever, Classifier Breed: leonberg
 
-** Total Elapsed Runtime: 0:0:19
+** Total Elapsed Runtime: 0:1:40

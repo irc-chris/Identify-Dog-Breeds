@@ -75,9 +75,8 @@ Type of CNN Model Architecture Used: alexnet
 % Dogs Correct: 100.0
 % Breeds Correct: 33.33333333333333
 % Match Labels: 40.0
-Misclassified Dogs:
 Misclassified Dogbreeds:
 Pet Label: malinois, Classifier Breed: german shepherd, german shepherd dog, german police dog, alsatian
 Pet Label: malinois, Classifier Breed: german shepherd, german shepherd dog, german police dog, alsatian
 
-** Total Elapsed Runtime: 0:0:14
+** Total Elapsed Runtime: 0:0:5
