@@ -2,7 +2,6 @@ Command Line Arguments:
      dir = pet_images/ 
     arch = vgg 
  dogfile = dognames.txt
-** Warning: Key= Dalmatian_04068.jpg already exists in results_dic with value = ['dalmatian']
 
 Pet Image Label Dictionary has 40 key-value pairs.
 Below are 10 of them:
@@ -329,4 +328,4 @@ Misclassified Dogbreeds:
 Pet Label: beagle, Classifier Breed: walker hound, walker foxhound
 Pet Label: great pyrenees, Classifier Breed: kuvasz
 
-** Total Elapsed Runtime: 0:0:59
+** Total Elapsed Runtime: 0:0:46

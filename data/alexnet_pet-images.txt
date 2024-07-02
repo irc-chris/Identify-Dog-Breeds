@@ -2,7 +2,6 @@ Command Line Arguments:
      dir = pet_images/ 
     arch = alexnet 
  dogfile = dognames.txt
-** Warning: Key= Dalmatian_04068.jpg already exists in results_dic with value = ['dalmatian']
 
 Pet Image Label Dictionary has 40 key-value pairs.
 Below are 10 of them:
@@ -333,4 +332,4 @@ Pet Label: golden retriever, Classifier Breed: tibetan mastiff
 Pet Label: beagle, Classifier Breed: english foxhound
 Pet Label: boston terrier, Classifier Breed: basenji
 
-** Total Elapsed Runtime: 0:0:8
+** Total Elapsed Runtime: 0:0:11

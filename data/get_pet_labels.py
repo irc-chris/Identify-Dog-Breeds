@@ -4,7 +4,7 @@
 #
 # PROGRAMMER: Ishawnia Christopher
 # DATE CREATED: June 27, 2024
-# REVISED DATE:
+# REVISED DATE: July 1, 2024
 # PURPOSE: Create the function get_pet_labels that creates the pet labels from
 #          the image's filename. This function inputs:
 #           - The Image Folder as image_dir within get_pet_labels function and
@@ -48,32 +48,23 @@ def get_pet_labels(image_dir):
 
     # Iterate through all files in the directory
     for file_name in all_files:
-        # Check it's not a duplicate label
-        if file_name not in results_dic:
-            word_list = file_name.split("_")
-            label = ""
 
-            # Check all alphabetical and get spaces
-            for word in word_list:
-                if word.isalpha():
-                    label += word + " "
+        # Make sure it's not a dot file and 
+        if not file_name.startswith('.'):
+            # Check it's not a duplicate label
+            if file_name not in results_dic:
+                # Get alphabetical components and join them by spaces.
+                label = " ".join([word.strip() for word in file_name.split("_") if word.isalpha()])
 
-            # Tried to Get name before numbers and convert to lowercase, but that relies
-            # on correct input formatting
-            #         label = file_name[:file_name.rfind('_')].lower()
-
-            # Separate by spaces and remove any extra external spacing
-            label = label.strip()
-
-            # Store lowercase label in dictionary
-            results_dic[file_name] = [label.lower()]
-    else:
-        print(
-            "** Warning: Key=",
-            file_name,
-            "already exists in results_dic with value =",
-            results_dic[file_name],
-        )
+                # Store lowercase label in dictionary
+                results_dic[file_name] = [label.lower()]
+            else:
+                print(
+                    "** Warning: Key=",
+                    file_name,
+                    "already exists in results_dic with value =",
+                    results_dic[file_name],
+                )
 
     # Return dictionary
     return results_dic
